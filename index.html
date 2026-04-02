@@ -181,7 +181,6 @@ button{font-family:var(--font);cursor:pointer}
 .vc-row{display:flex;justify-content:space-between;font-size:12px;padding:3px 0;border-bottom:.5px solid var(--surface2)}
 .vc-l{color:var(--text3)}.vc-r{color:var(--text);font-weight:500;text-align:right;max-width:60%}
 
-/* PRINT / INVOICE */
 .inv{background:#fff;color:#000;font-family:'Courier New',monospace;font-size:10px;padding:14px 18px;border:1px solid #ccc;border-radius:6px;max-width:820px;margin:0 auto}
 .inv-title{text-align:center;font-size:15px;font-weight:700;letter-spacing:3px;margin-bottom:8px}
 .inv-hdr{display:flex;justify-content:space-between;margin-bottom:5px;font-size:9px;line-height:1.8}
@@ -224,7 +223,6 @@ button{font-family:var(--font);cursor:pointer}
   .btn-row .btn{width:100%;justify-content:center}
 }
 @media(max-width:380px){.stat-grid{grid-template-columns:1fr}}
-/* PAYMENT PAGE */
 .pay-row{border-radius:var(--rl);margin-bottom:10px;overflow:hidden;border:1.5px solid;transition:all .2s}
 .pay-row.due{background:#fff5f5;border-color:#f5b8b8}
 .pay-row.paid{background:#f2fbf5;border-color:#a8d5b8}
@@ -329,7 +327,6 @@ button{font-family:var(--font);cursor:pointer}
 
   <div id="content">
 
-    <!-- DASHBOARD -->
     <div id="pg-dash" class="page on">
       <div class="pg-title">Dashboard</div>
       <div class="pg-sub" id="dash-sub">Graft Care Pharma — live overview</div>
@@ -341,7 +338,6 @@ button{font-family:var(--font);cursor:pointer}
       </div>
     </div>
 
-    <!-- PURCHASE -->
     <div id="pg-purchase" class="page">
       <div class="pg-title">Purchase Invoice</div>
       <div class="pg-sub">Record purchase — items auto-add to stock.</div>
@@ -373,12 +369,10 @@ button{font-family:var(--font);cursor:pointer}
           <input type="date" id="pu-exp-pay"/>
         </div>
       </div>
-
       <div class="card">
         <div class="card-t">Your pharmacy (buyer)</div>
         <div style="font-size:12px;color:var(--text2);background:var(--green-bg);border-radius:var(--r);padding:8px 12px" id="pu-my-preview">Fill in Settings to see your details here</div>
       </div>
-
       <div class="card">
         <div class="card-t">Invoice header</div>
         <div class="g3">
@@ -392,7 +386,6 @@ button{font-family:var(--font);cursor:pointer}
           <div class="fld"><label>Vendor IFSC &amp; Branch</label><input id="pu-vbank-ifsc" placeholder="HDFC0001234, Panjagutta"/></div>
         </div>
       </div>
-
       <div class="card">
         <div class="card-t">Product line items</div>
         <div class="li-wrap">
@@ -428,14 +421,12 @@ button{font-family:var(--font);cursor:pointer}
       </div>
     </div>
 
-    <!-- VENDOR INVENTORY -->
     <div id="pg-vendors" class="page">
       <div class="pg-title">Vendor Inventory</div>
       <div class="pg-sub">All vendors — auto-saved from purchase invoices.</div>
       <div id="vendors-list"><div class="card"><div class="empty">No vendors yet. Save a purchase invoice to add vendors.</div></div></div>
     </div>
 
-    <!-- VENDOR DETAIL -->
     <div id="pg-vendor-detail" class="page">
       <div class="btn-row no-print" style="margin-bottom:14px">
         <button class="btn btn-g" onclick="go('vendors',null)">← Back to Vendors</button>
@@ -443,7 +434,6 @@ button{font-family:var(--font);cursor:pointer}
       <div id="vendor-detail-content"></div>
     </div>
 
-    <!-- STOCK -->
     <div id="pg-stock" class="page">
       <div class="pg-title">Current Stock</div>
       <div class="pg-sub">All medicines in inventory — auto-updated from purchases</div>
@@ -461,7 +451,6 @@ button{font-family:var(--font);cursor:pointer}
       </div>
     </div>
 
-    <!-- SALES INVOICE -->
     <div id="pg-sales" class="page">
       <div class="pg-title">Sales Invoice</div>
       <div class="pg-sub">Generate tax invoice — retailer or patient</div>
@@ -568,7 +557,6 @@ button{font-family:var(--font);cursor:pointer}
       </div>
     </div>
 
-    <!-- PROFORMA PAGE -->
     <div id="pg-proforma" class="page">
       <div class="btn-row no-print" style="margin-bottom:14px">
         <button class="btn btn-p" onclick="confirmProforma()">✅ Confirm &amp; Convert to Invoice</button>
@@ -579,7 +567,6 @@ button{font-family:var(--font);cursor:pointer}
       <div id="proforma-area"></div>
     </div>
 
-    <!-- PRINT PAGE -->
     <div id="pg-print" class="page">
       <div class="btn-row no-print" style="margin-bottom:14px">
         <button class="btn btn-p" onclick="window.print()">🖨 Print invoice</button>
@@ -590,7 +577,6 @@ button{font-family:var(--font);cursor:pointer}
       <div id="print-area"></div>
     </div>
 
-    <!-- INVOICE HISTORY -->
     <div id="pg-history" class="page">
       <div class="pg-title">Invoice History</div>
       <div class="pg-sub">All generated sales invoices</div>
@@ -604,8 +590,6 @@ button{font-family:var(--font);cursor:pointer}
       </div>
     </div>
 
-
-    <!-- PAYMENTS -->
     <div id="pg-payments" class="page">
       <div class="pg-title">Payment Verification</div>
       <div class="pg-sub">Track due &amp; paid invoices — sorted by date</div>
@@ -618,7 +602,7 @@ button{font-family:var(--font);cursor:pointer}
       </div>
       <div id="pay-list"></div>
     </div>
-    <!-- SETTINGS -->
+
     <div id="pg-settings" class="page">
       <div class="pg-title">Settings</div>
       <div class="pg-sub">Your pharmacy details — appear on every invoice</div>
@@ -659,11 +643,10 @@ button{font-family:var(--font);cursor:pointer}
       </div>
     </div>
 
-  </div><!-- end #content -->
-</div><!-- end #main -->
-</div><!-- end #app -->
+  </div>
+</div>
+</div>
 
-<!-- EDIT STOCK MODAL -->
 <div class="modal-bg" id="edit-modal">
   <div class="modal">
     <div class="modal-title">Edit stock item</div>
@@ -688,18 +671,16 @@ button{font-family:var(--font);cursor:pointer}
 </div>
 
 <script>
-<script>
-const SUPA_URL = 'https://ldnymovjpnqyygarurzh.supabase.co';   // ← your URL here
-const SUPA_KEY = 'sb_publishable_zya-xA0RwTyVOCC4Elayfw_pJTktAjx';        // ← your anon key here
+// ══════════════════════════════════════════════════════════════
+// SUPABASE CONFIG — replace with your actual values
+// Get these from: Supabase → Project Settings → API
+// ══════════════════════════════════════════════════════════════
+const SUPA_URL = 'https://ldnymovjpnqyygarurzh.supabase.co';  // ← paste your URL here
+const SUPA_KEY = 'sb_publishable_zya-xA0RwTyVOCC4Elayfw_pJTktAjx';                      // ← paste your anon key here
 const DB_KEY   = 'db';
 
 // ══════════════════════════════════════════════════════════════
-// STATE — Central in-memory database for the entire application.
-// ...
-// ══════════════════════════════════════════════════════════════
-// STATE — Central in-memory database for the entire application.
-// All data (stock, vendors, invoices, payments) lives in this DB
-// object. It gets saved to localStorage and reloaded on page open.
+// STATE
 // ══════════════════════════════════════════════════════════════
 var DB = {
   settings:{name:'GRAFT CARE PHARMA',gst:'',dl1:'',dl2:'',dl3:'',addr1:'',addr2:'',city:'',ph:'',email:'',bankName:'',bankAcc:'',bankIfsc:''},
@@ -709,10 +690,7 @@ var DB = {
 var salType='retailer', puRowId=0, salRowId=0, pendingProforma=null;
 
 // ══════════════════════════════════════════════════════════════
-// PERSIST — Save and load DB to browser localStorage.
-// save()   : Converts DB object to JSON string and stores it.
-// loadDB() : Reads JSON string from storage and restores DB.
-// No server or internet required — all data stays in the browser.
+// SUPABASE PERSIST — replaces localStorage save/load
 // ══════════════════════════════════════════════════════════════
 async function _supa(method, body) {
   const res = await fetch(
@@ -742,13 +720,12 @@ async function loadDB() {
     );
     const rows = await res.json();
     if (rows.length) DB = rows[0].value;
+    if (!DB.payments) DB.payments = [];
   } catch(e) { console.warn('load failed', e); }
 }
 
 // ══════════════════════════════════════════════════════════════
-// TOAST — Small pop-up notification shown at bottom-right.
-// Usage: toast('Message text', 'green' | 'red' | 'amber' | 'blue')
-// The message fades in, stays for ~3 seconds, then fades out.
+// TOAST
 // ══════════════════════════════════════════════════════════════
 function toast(msg,type){
   type=type||'green';
@@ -761,26 +738,17 @@ function toast(msg,type){
 }
 
 // ══════════════════════════════════════════════════════════════
-// NAVIGATION — Controls which page is visible.
-// go(pg, btn) : Hides all .page divs, shows #pg-{pg}, highlights
-//               the matching sidebar button, updates the topbar title,
-//               and triggers any data refresh needed for that page.
-// pgTitles    : Maps page keys to human-readable header titles.
-// toggleSB / closeSB : Open/close the sidebar on mobile.
+// NAV
 // ══════════════════════════════════════════════════════════════
 var pgTitles={dash:'Dashboard',purchase:'Purchase Invoice',vendors:'Vendor Inventory','vendor-detail':'Vendor Details',stock:'Current Stock',sales:'Sales Invoice',proforma:'Proforma Invoice',print:'Print Invoice',history:'Invoice History',payments:'Payment Verification',settings:'Settings'};
 
 function go(pg, btn){
-  // hide all pages
   var pages = document.querySelectorAll('.page');
   for(var i=0;i<pages.length;i++) pages[i].classList.remove('on');
-  // deactivate all nav buttons
   var btns = document.querySelectorAll('.sb-btn');
   for(var i=0;i<btns.length;i++) btns[i].classList.remove('on');
-  // show target page
   var target = document.getElementById('pg-'+pg);
   if(target) target.classList.add('on');
-  // activate nav button
   if(btn){ btn.classList.add('on'); }
   else{
     for(var i=0;i<btns.length;i++){
@@ -804,13 +772,7 @@ function toggleSB(){ document.getElementById('sb').classList.toggle('open'); doc
 function closeSB(){ document.getElementById('sb').classList.remove('open'); document.getElementById('ov').classList.remove('show'); }
 
 // ══════════════════════════════════════════════════════════════
-// UTILITIES — Small helper functions used throughout the app.
-// today()   : Returns current date as YYYY-MM-DD string.
-// fmtDate() : Converts YYYY-MM-DD to DD/MM/YYYY for display.
-// fmtNow()  : Returns current date + time as a formatted string.
-// genId()   : Generates a short unique ID using timestamp + random.
-// setPay()  : Handles the Cash/Online/Credit button-group toggle
-//             in purchase form; shows expected-date field for credit.
+// UTILS
 // ══════════════════════════════════════════════════════════════
 function today(){ return new Date().toISOString().slice(0,10); }
 function fmtDate(d){ if(!d) return ''; var p=d.split('-'); return p[2]+'/'+p[1]+'/'+p[0]; }
@@ -828,13 +790,9 @@ function setPay(el,val,pfx){
     if(wrap) wrap.style.display=(val==='Online'||val==='Credit')?'':'none';
   }
 }
+
 // ══════════════════════════════════════════════════════════════
-// SETTINGS — Pharmacy details used on every invoice.
-// loadSettings()  : Populates the settings form fields from DB.
-// saveSettings()  : Reads form fields and writes them back to DB,
-//                   then saves to localStorage.
-// myPreviewHtml() : Builds a short one-line preview of pharmacy
-//                   details shown on the purchase and sales pages.
+// SETTINGS
 // ══════════════════════════════════════════════════════════════
 function loadSettings(){
   var s=DB.settings;
@@ -861,15 +819,7 @@ function refreshSalPreview(){ var el=document.getElementById('sal-my-preview'); 
 function refreshPuPreview(){ var el=document.getElementById('pu-my-preview'); if(el) el.innerHTML=myPreviewHtml(); }
 
 // ══════════════════════════════════════════════════════════════
-// PURCHASE — Handles the purchase invoice form.
-// addPuRow()    : Adds a new blank product row to the purchase table.
-// calcPuRow()   : Recalculates amount for one row (qty × rate - disc).
-// calcPu()      : Recalculates the purchase subtotal, GST, discount
-//                 and grand total shown in the summary box.
-// savePurchase(): Reads all rows and vendor fields, saves vendor to
-//                 DB.vendors, adds each product to DB.stock (merging
-//                 by name+batch if already exists), saves purchase
-//                 history, then resets the form.
+// PURCHASE
 // ══════════════════════════════════════════════════════════════
 function addPuRow(){
   puRowId++;
@@ -951,7 +901,6 @@ function savePurchase(){
   };
   var existing=DB.vendors.find(function(v){ return v.name===vName; });
   if(!existing){ DB.vendors.push(vendor); } else { Object.assign(existing,vendor); }
-
   var added=0;
   var puItems=[];
   for(var i=0;i<rows.length;i++){
@@ -989,11 +938,7 @@ function savePurchase(){
 }
 
 // ══════════════════════════════════════════════════════════════
-// VENDOR PALETTES — Visual colour themes for vendor cards.
-// Each palette has 4 colour values: bg (card background),
-// border (card outline), badge (accent/icon colour), text (font).
-// Vendors are assigned a palette by their index in DB.vendors,
-// cycling through the 8 options automatically.
+// VENDOR PALETTES
 // ══════════════════════════════════════════════════════════════
 var VENDOR_PALETTES=[
   {bg:'#fff0f0',border:'#f5b8b8',badge:'#c0392b',text:'#7a1d14',label:'Rose'},
@@ -1008,10 +953,7 @@ var VENDOR_PALETTES=[
 function getVendorPalette(idx){ return VENDOR_PALETTES[idx%VENDOR_PALETTES.length]; }
 
 // ══════════════════════════════════════════════════════════════
-// VENDOR LIST — Renders all saved vendors as coloured cards.
-// For each vendor it calculates total spend and purchase count
-// by filtering DB.purchaseHistory. Clicking a card opens the
-// full vendor detail view via openVendorDetail().
+// VENDOR LIST
 // ══════════════════════════════════════════════════════════════
 function renderVendors(){
   var el=document.getElementById('vendors-list');
@@ -1021,11 +963,9 @@ function renderVendors(){
     var totalSpent=DB.purchaseHistory.filter(function(p){ return p.vendorName===v.name; }).reduce(function(sum,p){ return sum+(p.items||[]).reduce(function(s2,it){ return s2+(it.qty*it.buyRate*(1-(it.disc||0)/100)); },0); },0);
     var purchaseCount=DB.purchaseHistory.filter(function(p){ return p.vendorName===v.name; }).length;
     return '<div class="vc" onclick="openVendorDetail(\''+v.id+'\')" style="cursor:pointer;background:'+pal.bg+';border:2px solid '+pal.border+'">'
-      +'<div class="vc-hdr">'
-      +'<div style="flex:1"><div style="display:flex;align-items:center;gap:8px;margin-bottom:3px">'
+      +'<div class="vc-hdr"><div style="flex:1"><div style="display:flex;align-items:center;gap:8px;margin-bottom:3px">'
       +'<div style="width:12px;height:12px;border-radius:50%;background:'+pal.badge+';flex-shrink:0"></div>'
-      +'<div class="vc-name" style="color:'+pal.text+'">'+v.name+'</div>'
-      +'</div>'
+      +'<div class="vc-name" style="color:'+pal.text+'">'+v.name+'</div></div>'
       +'<div style="font-size:11px;color:var(--text3);padding-left:20px">'+(v.addr||'')+'</div></div>'
       +'<div style="text-align:right;flex-shrink:0">'
       +'<div style="font-size:10px;font-family:var(--mono);padding:3px 8px;border-radius:var(--r);background:'+pal.badge+';color:#fff;font-weight:600;margin-bottom:4px">'+v.id+'</div>'
@@ -1045,10 +985,7 @@ function renderVendors(){
 }
 
 // ══════════════════════════════════════════════════════════════
-// VENDOR DETAIL — Full page view for a single vendor.
-// Shows their contact info, bank details, and a full timeline
-// of every purchase made from them with itemised product rows.
-// Opened when the user clicks a vendor card in Vendor Inventory.
+// VENDOR DETAIL
 // ══════════════════════════════════════════════════════════════
 function openVendorDetail(vendorId){
   var vIdx=DB.vendors.findIndex(function(v){ return v.id===vendorId; });
@@ -1062,8 +999,7 @@ function openVendorDetail(vendorId){
     +'<div style="display:flex;justify-content:space-between;align-items:flex-start;flex-wrap:wrap;gap:12px">'
     +'<div><div style="display:flex;align-items:center;gap:10px;margin-bottom:6px">'
     +'<div style="width:16px;height:16px;border-radius:50%;background:'+pal.badge+'"></div>'
-    +'<div style="font-size:22px;font-weight:700;color:'+pal.text+'">'+v.name+'</div>'
-    +'<span style="font-size:10px;padding:3px 10px;border-radius:12px;background:'+pal.badge+';color:#fff;font-weight:600">'+pal.label+'</span></div>'
+    +'<div style="font-size:22px;font-weight:700;color:'+pal.text+'">'+v.name+'</div></div>'
     +'<div style="font-size:12px;color:var(--text3);margin-left:26px">'+(v.addr||'')+'</div></div>'
     +'<div style="font-family:var(--mono);font-size:13px;font-weight:700;padding:6px 14px;border-radius:var(--r);background:'+pal.badge+';color:#fff">'+v.id+'</div></div>'
     +'<div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(140px,1fr));gap:10px;margin-top:16px">'
@@ -1123,13 +1059,7 @@ function openVendorDetail(vendorId){
 }
 
 // ══════════════════════════════════════════════════════════════
-// STOCK — Renders the current stock table.
-// renderStock() : Builds the stock table from DB.stock.
-//                 Shows low-stock alerts (qty < 20) and
-//                 expiry alerts (expiring within 3 months).
-// openEdit(i)   : Opens the edit modal pre-filled for stock[i].
-// saveEdit()    : Reads the modal form and updates stock[i] in DB.
-// delStock(i)   : Deletes a stock item after confirmation.
+// STOCK
 // ══════════════════════════════════════════════════════════════
 function renderStock(){
   var alerts=document.getElementById('stock-alerts');
@@ -1189,19 +1119,7 @@ function delStock(i){
 function closeModal(){ document.getElementById('edit-modal').classList.remove('show'); }
 
 // ══════════════════════════════════════════════════════════════
-// SALES — Handles the sales invoice form.
-// setSalType()   : Switches between Retailer and Patient mode,
-//                  showing the relevant customer details section.
-// resetSalInvNo(): Auto-generates the next invoice number based
-//                  on type (RET- or PAT-) and current counter.
-// buildDrop()    : Searches DB.stock and shows autocomplete
-//                  suggestions as the user types a medicine name.
-// fillSalRow()   : Auto-fills batch, expiry, MRP, GST when a
-//                  medicine is selected from the autocomplete list.
-// addSalRow()    : Adds a new blank product row to the sales table.
-// calcSalRow()   : Recalculates amount and GST for a single row.
-// calcSal()      : Recalculates the full sales summary (subtotal,
-//                  GST, discount, charity, rounding, net payable).
+// SALES
 // ══════════════════════════════════════════════════════════════
 function setSalType(t){
   salType=t;
@@ -1216,7 +1134,6 @@ function resetSalInvNo(){
   var cnt=(isRet?DB.counters.ret:DB.counters.pat)+1;
   document.getElementById('sal-invno').value=(isRet?'RET-':'PAT-')+new Date().getFullYear()+'-'+String(cnt).padStart(4,'0');
 }
-
 function buildDrop(inp,drop,tr){
   var q=inp.value.trim().toLowerCase();
   if(!q){ drop.classList.remove('show'); return; }
@@ -1254,11 +1171,9 @@ function addSalRow(){
   acInp.onfocus=function(){ if(acInp.value.trim()) buildDrop(acInp,drop,tr); };
   document.addEventListener('click',function(e){ if(!acWrap.contains(e.target)) drop.classList.remove('show'); },{passive:true});
   acWrap.appendChild(acInp); acWrap.appendChild(drop); nameTd.appendChild(acWrap); tr.appendChild(nameTd);
-
   var bTd=document.createElement('td'); var bInp=document.createElement('input');
   bInp.type='text'; bInp.className='f-batch'; bInp.placeholder='BT2406'; bInp.style.width='72px';
   bTd.appendChild(bInp); tr.appendChild(bTd);
-
   var expTd=document.createElement('td'); expTd.style.whiteSpace='nowrap';
   var expWrap=document.createElement('div'); expWrap.className='exp-c';
   var mm=document.createElement('input'); mm.type='text'; mm.className='f-emm'; mm.placeholder='MM'; mm.style.width='28px'; mm.maxLength=2;
@@ -1267,13 +1182,11 @@ function addSalRow(){
   var yy=document.createElement('input'); yy.type='text'; yy.className='f-eyy'; yy.placeholder='YY'; yy.style.width='26px'; yy.maxLength=2;
   yy.oninput=function(){ this.value=this.value.replace(/\D/g,'').slice(0,2); };
   expWrap.appendChild(mm); expWrap.appendChild(sep); expWrap.appendChild(yy); expTd.appendChild(expWrap); tr.appendChild(expTd);
-
   [{cls:'f-mrp',ph:'0.00',w:'62px'},{cls:'f-qty',ph:'Strips',w:'52px'},{cls:'f-free',ph:'',w:'32px'}].forEach(function(f){
     var td=document.createElement('td'); var inp=document.createElement('input');
     inp.type='number'; inp.className=f.cls; inp.placeholder=f.ph; inp.style.width=f.w;
     inp.oninput=function(){ calcSalRow(tr); }; td.appendChild(inp); tr.appendChild(td);
   });
-
   var amtTd=document.createElement('td'); amtTd.className='row-calc f-amt'; amtTd.textContent='0.00'; tr.appendChild(amtTd);
   var discTd=document.createElement('td'); var discInp=document.createElement('input');
   discInp.type='number'; discInp.className='f-disc'; discInp.placeholder='0'; discInp.style.width='36px';
@@ -1327,10 +1240,7 @@ function calcSal(){
 function getExpFromTr(tr){ var mm=tr.querySelector('.f-emm')&&tr.querySelector('.f-emm').value||''; var yy=tr.querySelector('.f-eyy')&&tr.querySelector('.f-eyy').value||''; return mm&&yy?mm+'/'+yy:''; }
 
 // ══════════════════════════════════════════════════════════════
-// NUMBERS TO WORDS — Converts a rupee amount to words for invoice.
-// Used in the "Amt In Words" line on the printed tax invoice.
-// Handles values up to crores (Indian numbering system).
-// Example: 1250 → "One Thousand Two Hundred Fifty Rupees Only"
+// NUMBERS TO WORDS
 // ══════════════════════════════════════════════════════════════
 function n2w(n){
   var a=['','One','Two','Three','Four','Five','Six','Seven','Eight','Nine','Ten','Eleven','Twelve','Thirteen','Fourteen','Fifteen','Sixteen','Seventeen','Eighteen','Nineteen'];
@@ -1343,12 +1253,7 @@ function n2w(n){
 }
 
 // ══════════════════════════════════════════════════════════════
-// BUILD INVOICE HTML — Assembles the printable tax invoice layout.
-// buildInvHtml(invData, s) takes the saved invoice data object and
-// the pharmacy settings object, then returns a full HTML string
-// in thermal/dot-matrix receipt style (Courier New font).
-// Includes: shop header, customer details, item table, GST summary
-// table, bank details, amount in words, net payable, legal footer.
+// BUILD INVOICE HTML
 // ══════════════════════════════════════════════════════════════
 function buildInvHtml(invData,s){
   var invNo=invData.invNo,buyerName=invData.buyerName,invDate=invData.date,pay=invData.pay;
@@ -1412,11 +1317,7 @@ function buildInvHtml(invData,s){
 }
 
 // ══════════════════════════════════════════════════════════════
-// COLLECT SALES DATA — Reads all current sales form fields into
-// a single structured object. Used by both genProforma() and is
-// the shared data-gathering step before any invoice is saved.
-// Returns: invoice number, buyer details, item array with amounts,
-// GST map broken down by rate, totals, discount, and net payable.
+// COLLECT SALES DATA
 // ══════════════════════════════════════════════════════════════
 function collectSalData(){
   var rows=document.querySelectorAll('#sal-items tr');
@@ -1465,15 +1366,7 @@ function collectSalData(){
 }
 
 // ══════════════════════════════════════════════════════════════
-// PROFORMA — Generates a draft invoice for customer confirmation.
-// genProforma()     : Builds a dashed-border proforma preview from
-//                     the current sales form without deducting stock
-//                     or saving to history yet.
-// confirmProforma() : Converts the pending proforma into a final
-//                     tax invoice — deducts stock, saves to DB,
-//                     increments counters, redirects to print page.
-// pendingProforma   : Temporary variable holding the proforma data
-//                     between generation and confirmation steps.
+// PROFORMA
 // ══════════════════════════════════════════════════════════════
 function genProforma(){
   var data=collectSalData();
@@ -1562,7 +1455,6 @@ function genSalesInv(){
     if(!gstMap[gPct]) gstMap[gPct]={taxable:0,cgst:0,sgst:0};
     gstMap[gPct].taxable+=after; gstMap[gPct].cgst+=gAmt/2; gstMap[gPct].sgst+=gAmt/2;
     items.push({name:name,batch:batch,exp:exp,mrp:mrp,qty:qty,free:free,amount:after,disc:disc,gst:gPct});
-    // Deduct from stock
     var stock=DB.stock.find(function(st){ return st.name===name&&st.batch===batch; });
     if(stock) stock.qty=Math.max(0,stock.qty-qty);
   }
@@ -1583,12 +1475,7 @@ function genSalesInv(){
 }
 
 // ══════════════════════════════════════════════════════════════
-// HISTORY — Renders the invoice history table.
-// renderHistory() : Lists all saved sales invoices from DB.salesInvoices
-//                   with invoice number, type, customer, date, payment,
-//                   GST, and net total. Each row has a View/PDF button.
-// viewInv(i)      : Rebuilds the invoice HTML for invoice[i] and
-//                   shows it on the print page.
+// HISTORY
 // ══════════════════════════════════════════════════════════════
 function renderHistory(){
   var tb=document.getElementById('hist-body');
@@ -1607,10 +1494,7 @@ function renderHistory(){
 }
 
 // ══════════════════════════════════════════════════════════════
-// DASHBOARD — Renders the overview/home page stats.
-// Shows total stock items, unit count, low-stock count, vendor
-// count, invoice count, and total revenue from all invoices.
-// Also shows a table of the 5 most recent sales invoices.
+// DASHBOARD
 // ══════════════════════════════════════════════════════════════
 function renderDash(){
   var totalStock=DB.stock.reduce(function(a,s){ return a+s.qty; },0);
@@ -1632,10 +1516,7 @@ function renderDash(){
 }
 
 // ══════════════════════════════════════════════════════════════
-// VIEW INV — Opens a saved invoice for viewing or printing.
-// viewInv(i) : Finds invoice at index i in DB.salesInvoices,
-//              rebuilds the full invoice HTML, and navigates
-//              to the print page. Used from Invoice History.
+// VIEW INV
 // ══════════════════════════════════════════════════════════════
 function viewInv(i){
   var inv=DB.salesInvoices[i];
@@ -1649,11 +1530,7 @@ function viewInv(i){
 }
 
 // ══════════════════════════════════════════════════════════════
-// SAVE PDF — Opens a new browser window with the invoice styled
-// for printing, then triggers the browser's print dialog.
-// The user can save as PDF from the print dialog.
-// Uses a self-contained inline style block (no external CSS)
-// so the printed output is consistent across browsers.
+// SAVE PDF
 // ══════════════════════════════════════════════════════════════
 function saveInvPDF(){
   var invContent=document.getElementById('inv-content');
@@ -1670,50 +1547,7 @@ function saveInvPDF(){
 }
 
 // ══════════════════════════════════════════════════════════════
-// INIT — Entry point. Runs once when the page loads.
-// 1. Loads saved DB from localStorage.
-// 2. Sets today's date in topbar and default form date fields.
-// 3. Loads pharmacy settings into the settings form.
-// 4. Adds a blank row to purchase and sales tables.
-// 5. Renders the dashboard.
-// 6. Migrates any existing invoices into the payments tracker.
-// 7. Updates the due badge on the Payments sidebar button.
-// ══════════════════════════════════════════════════════════════
-async function init(){
-  await loadDB(); // synchronous localStorage — no network hang
-  var n=new Date();
-  document.getElementById('tb-date').textContent=n.toLocaleDateString('en-IN',{day:'numeric',month:'short',year:'numeric'});
-  document.getElementById('pu-date').value=today();
-  document.getElementById('sal-date').value=today();
-  document.getElementById('sb-name').textContent=DB.settings.name||'Graft Care Pharma';
-  loadSettings();
-  addPuRow();
-  addSalRow();
-  renderDash();
-  // migrate existing invoices that have no payment record
-  if (!DB.payments) DB.payments = [];
-  DB.salesInvoices.forEach(function(inv){ addPaymentRecord(inv); });
-  save();
-  updateDueBadge();
-}
-
-
-// ══════════════════════════════════════════════════════════════
-// PAYMENTS — Tracks payment status for every sales invoice.
-// addPaymentRecord(inv) : Called automatically when a sales invoice
-//                         is generated. Cash invoices default to
-//                         'paid'; Credit/Online default to 'due'.
-//                         Skips if a record already exists (no dupes).
-// setPayFilter()        : Switches the list between All / Due / Paid.
-// togglePayStatus(id)   : Flips a payment between 'due' and 'paid',
-//                         records the paid date, saves, re-renders.
-// togglePayDetail(id)   : Expands/collapses the mini invoice panel
-//                         under each payment row.
-// updateDueBadge()      : Updates the red count badge on the sidebar
-//                         Payments button showing pending due count.
-// renderPayments()      : Builds the full payment list — due rows
-//                         always appear first (red), paid rows below
-//                         (green), both sorted newest date first.
+// PAYMENTS
 // ══════════════════════════════════════════════════════════════
 var payFilter = 'all';
 
@@ -1767,14 +1601,12 @@ function renderPayments() {
   var paidRecs = DB.payments.filter(function(p){ return p.status === 'paid'; });
   var dueAmt = dueRecs.reduce(function(a,p){ return a+(p.net||0); },0);
   var paidAmt = paidRecs.reduce(function(a,p){ return a+(p.net||0); },0);
-
   document.getElementById('pay-stats').innerHTML =
     '<div class="stat"><div class="stat-l">Total invoices</div><div class="stat-v">'+DB.payments.length+'</div></div>'+
     '<div class="stat"><div class="stat-l">Due</div><div class="stat-v r">'+dueRecs.length+'</div></div>'+
     '<div class="stat"><div class="stat-l">Paid</div><div class="stat-v g">'+paidRecs.length+'</div></div>'+
     '<div class="stat"><div class="stat-l">Due amount</div><div class="stat-v r" style="font-size:16px">'+rs+dueAmt.toLocaleString('en-IN',{maximumFractionDigits:0})+'</div></div>'+
     '<div class="stat"><div class="stat-l">Collected</div><div class="stat-v g" style="font-size:16px">'+rs+paidAmt.toLocaleString('en-IN',{maximumFractionDigits:0})+'</div></div>';
-
   var srch = ((document.getElementById('pay-search') && document.getElementById('pay-search').value)||'').toLowerCase();
   var list = DB.payments.filter(function(p){
     if (payFilter==='due' && p.status!=='due') return false;
@@ -1786,12 +1618,10 @@ function renderPayments() {
     if (a.status!==b.status) return a.status==='due'?-1:1;
     return new Date(b.date)-new Date(a.date);
   });
-
   if (!list.length) {
     document.getElementById('pay-list').innerHTML='<div class="card"><div class="empty">No payment records yet. Generate a sales invoice to create entries.</div></div>';
     updateDueBadge(); return;
   }
-
   var html='';
   list.forEach(function(p){
     var isPaid=p.status==='paid';
@@ -1799,7 +1629,6 @@ function renderPayments() {
     var trackCls=isPaid?'paid-track':'due-track';
     var lbl=isPaid?'PAID':'DUE';
     var buyerText=(p.buyerLeft||'').replace(/<[^>]+>/g,' ').replace(/\s+/g,' ').trim();
-
     var itemRows=(p.items||[]).map(function(it,i){
       return '<tr><td>'+(i+1)+'</td><td style="font-weight:600">'+(it.name||'')+'</td>'+
         '<td>'+(it.batch||'')+'</td><td>'+(it.exp||'')+'</td>'+
@@ -1808,11 +1637,9 @@ function renderPayments() {
         '<td style="text-align:right;font-weight:600">'+(it.amount||0).toFixed(2)+'</td>'+
         '<td style="text-align:right">'+(it.gst||0)+'%</td></tr>';
     }).join('');
-
     var paidInfo=isPaid
       ?'<div class="pay-paid-info">Paid on '+fmtDate(p.paidOn||p.date)+' via '+(p.pay||'--')+'</div>'
       :'<div class="pay-due-info">Payment pending -- '+(p.pay||'--')+'</div>';
-
     html+='<div class="pay-row '+rowCls+'">'+
       '<div class="pay-row-hdr" onclick="togglePayDetail(\'' + p.id + '\')">'+
         '<span class="pay-row-inv">'+(p.invNo||'--')+'</span>'+
@@ -1846,11 +1673,29 @@ function renderPayments() {
       '</div>'+
     '</div>';
   });
-
   document.getElementById('pay-list').innerHTML=html;
   updateDueBadge();
 }
 
+// ══════════════════════════════════════════════════════════════
+// INIT — async so it waits for Supabase data before rendering
+// ══════════════════════════════════════════════════════════════
+async function init(){
+  await loadDB();
+  var n=new Date();
+  document.getElementById('tb-date').textContent=n.toLocaleDateString('en-IN',{day:'numeric',month:'short',year:'numeric'});
+  document.getElementById('pu-date').value=today();
+  document.getElementById('sal-date').value=today();
+  document.getElementById('sb-name').textContent=DB.settings.name||'Graft Care Pharma';
+  loadSettings();
+  addPuRow();
+  addSalRow();
+  renderDash();
+  if (!DB.payments) DB.payments = [];
+  DB.salesInvoices.forEach(function(inv){ addPaymentRecord(inv); });
+  save();
+  updateDueBadge();
+}
 
 init();
 </script>
